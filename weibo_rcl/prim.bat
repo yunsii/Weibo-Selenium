@@ -1,11 +1,11 @@
 @echo off
 set "root_path=c:\prim\"
 set "firefoxconf=%root_path%firefoxconf.selenium"
-echo Ä¿±êÎÄ¼ş¼Ğ %firefoxconf%
-if exist %firefoxconf% (echo %firefoxconf%ÒÑ´æÔÚ
+echo ç›®æ ‡æ–‡ä»¶å¤¹ %firefoxconf%
+if exist %firefoxconf% (echo %firefoxconf%å·²å­˜åœ¨
 ) else (
 md %firefoxconf%
-echo ĞÂ½¨%firefoxconf%
+echo æ–°å»º%firefoxconf%
 )
 set "pwd=%~dp0"
 ::echo pwd is
@@ -13,22 +13,23 @@ set "pwd=%~dp0"
 ::echo path is
 ::echo %path%
 set "selenium=%pwd%firefoxconf.selenium"
-echo Ô´ÎÄ¼ş¼Ğ %selenium%
+echo æºæ–‡ä»¶å¤¹ %selenium%
 Xcopy "%selenium%" "%firefoxconf%" /s /e /d /y
-echo Ìí¼Ó»ğºüä¯ÀÀÆ÷Çı¶¯µ½ÏµÍ³»·¾³±äÁ¿
+echo æ·»åŠ ç«ç‹æµè§ˆå™¨é©±åŠ¨åˆ°ç³»ç»Ÿç¯å¢ƒå˜é‡
 
 if not exist sys_path_bak.txt (call sys_path_bak.bat)
 
 set /p path_=<sys_path_bak.txt
-echo »·¾³±äÁ¿sys_path_bak: %path_%
+echo ç¯å¢ƒå˜é‡sys_path_bak: %path_%
 
 ::set "new_path=%path_%;%pwd%"
-echo ĞŞ¸ÄºóµÄpath: %new_path%
-rem ºÏ²¢ÓÃ»§pathºÍÏµÍ³path
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v path /d "%path_%
+echo ä¿®æ”¹åçš„path: %new_path%
+rem åˆå¹¶ç”¨æˆ·pathå’Œç³»ç»Ÿpath
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v path /d "%path_%"
 ::reg add "HKCU\Environment" /v path /d "%new_path%
-setx "Path" "%pwd%
-echo ĞŞ¸ÄºóµÄ»·¾³±äÁ¿:
+setx "Path" "%pwd%\"
+echo ä¿®æ”¹åçš„ç³»ç»Ÿç¯å¢ƒå˜é‡path:
 reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v path
+echo ä¿®æ”¹åçš„ç”¨æˆ·ç¯å¢ƒå˜é‡path:
 reg query "HKCU\Environment" /v path
 pause
