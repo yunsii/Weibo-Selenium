@@ -424,7 +424,8 @@ def write_comment_link(comment_link):
         lclink.read(user_path, encoding='utf-8')
         lclink.set('basic', 'last_comment_link', comment_link)
         with open(user_path, 'w', encoding='utf-8') as f:  # 更新last_like_link
-            print('last_comment_link 更新为:', comment_link)
+            # print('last_comment_link 更新为:', comment_link)
+            print('last_commet_link 已更新')
             lclink.write(f)
         write_comment_link_count += 1
 
