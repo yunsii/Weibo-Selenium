@@ -1,2 +1,2 @@
 echo %path%>sys_path_bak.txt
-echo 系统环境变量备份文件: sys_path_bak.txt
+echo 绯荤粺鐜鍙橀噺澶囦唤鏂囦欢: sys_path_bak.txt
