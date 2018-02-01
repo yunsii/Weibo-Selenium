@@ -1,4 +1,12 @@
-# prim
-微博 贴吧 相关工具
+prim
+====
 
-weibo_rcl --> 微博自动转评赞工具(基于 Python3.6.2, Selenium 3.8.1 --> exe)
+a set of tools of Sina Microblog & Baidu Post Bar by Python 3.
+
+
+I will try my best to write the English document, juse because my English is very pool. Also, it's a good time to learn English and  Python. How wonderful! Let's go ~
+
+
+## Microblog_rcl
+
+"rcl" means Repost, Comment, Like. this tool is used for automatic repost, comment, like or called thumb up? In addition, comment and repost will post with Super Topic (what a direct translation), which is composed of Chinese characters, like "#张三#". if wrong, you can modify it in user.ini simply. I also learned something of [Selenium](https://seleniumhq.github.io/selenium/docs/api/py/index.html) due to this opportunity.
