@@ -313,6 +313,12 @@ def prim(driver, repost_users):
                 eid = RCL(weibo[1], driver, username)
                 if eid == 0:
                     print(weibo[0], '\t*转评赞完成\t', username)
+                    # 第一页有转评赞在 last_comment_link 之前的微博时, 跳出循环
+                    # 此时得到 write_comment_link_count == 1
+                    global write_comment_link_count
+                    if write_comment_link_count == 1:
+                        rcl = 1
+                        break
                 elif eid == 1:  # 找到上次转评赞链接,返回首页,跳出循环,结束prim方法
                     rcl = eid
                     break
@@ -510,4 +516,3 @@ if __name__ == '__main__':
     # driver = base(1)
     # cookies = get_local_cookies()
     # open_homepage(driver, cookies)  # homepage test
-		
