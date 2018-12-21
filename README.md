@@ -1,4 +1,4 @@
-prim
+Weibo-Selenium
 ====
 A set of tools of Sina Microblog & Baidu Post Bar by Python 3.
 
