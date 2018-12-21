@@ -1,6 +1,6 @@
 Weibo-Selenium
 ====
-A set of tools of Sina Microblog & Baidu Post Bar by Python 3.
+A set of tools of Sina Weibo by Python 3.
 
 
 I will try my best to write the English document, it's a good time to learn English and Python. How wonderful! Let's go ~
